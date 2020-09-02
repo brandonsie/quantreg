@@ -5,7 +5,7 @@ Description: Estimation and inference methods for models of conditional quantile
   for conditional quantiles of a univariate response and several methods for handling
   censored survival data.  Portfolio selection methods based on expected shortfall
   risk are also now included.
-Version: 5.61
+Version: 5.62
 Authors@R: c(
     person("Roger", "Koenker",  role = c("cre","aut"), email =  "rkoenker@illinois.edu"),
     person("Stephen", "Portnoy",  role = c("ctb"), 

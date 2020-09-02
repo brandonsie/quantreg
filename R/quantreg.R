@@ -654,13 +654,13 @@ function (x, y, tau = 0.5, alpha = 0.1, ci = FALSE, iid = TRUE,
 }
 
 "rq.fit.conquer" <- function(x, y, tau = 0.5, kernel = c("Gaussian", "uniform", 
-    "parabolic", "triangular"), h = 0, standardize = TRUE, tol = 1e-04, 
+    "parabolic", "triangular"), h = 0, tol = 1e-04, 
     iteMax = 5000, ci = FALSE, alpha = 0.05, B = 1000)
 {
     if(!requireNamespace("conquer", quietly = TRUE))
             stop("method conquer requires package conquer")
-    fit = conquer::conquer(x[,-1], y, tau = tau, kernel = kernel, h = h, standardize =
-	standardize, tol = tol, iteMax = iteMax, ci = FALSE, alpha = alpha, B = 1000)
+    fit = conquer::conquer(x[,-1], y, tau = tau, kernel = kernel, h = h, 
+                           tol = tol, iteMax = iteMax, ci = FALSE, alpha = alpha, B = 1000)
     coefficients = fit$coeff 
     names(coefficients) = dimnames(x)[[2]]
     residuals = fit$residual
